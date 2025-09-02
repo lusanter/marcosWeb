@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+}
+
+.hero {
+    position: relative;
+    background: url('public/santarosa.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+
+}
+
+
+.search-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+}
+
+.gallery img {
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
