@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservas - IE Santa Rosa Sullana</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fuente (opcional, mejora la presentación) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">IE Santa Rosa Sullana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="reservas.html" class="nav-link active">Reservas</a></li>
+          <li class="nav-item"><a href="galeria.html" class="nav-link">Galería</a></li>
+          <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CABECERA REFINADA -->
+  <header class="container my-5">
+    <div class="rounded-4 p-4 shadow-sm bg-white border-start border-4 border-primary">
+      <h1 class="h3 mb-1 fw-bold">Reservas de instalaciones deportivas</h1>
+      <p class="mb-0 text-muted">
+        Accede a las canchas y piscinas — selecciona fecha, hora y confirma tu reserva en pocos pasos.
+      </p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-4">
+      <!-- FORMULARIO -->
+      <section class="col-lg-8">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-semibold mb-2">1. Selección</h2>
+            <p class="small text-muted mb-4">Elige la instalación, luego completa fecha, hora y tus datos.</p>
+
+            <form class="row g-3" novalidate>
+              <!-- Instalaciones (botones limpias, sin etiquetas predefinidas) -->
+              <div class="col-12">
+                <label class="form-label fw-medium mb-2">Tipo de instalación</label>
+                <div class="d-flex gap-2 flex-wrap">
+                  <label class="btn btn-outline-secondary rounded-pill px-3 py-2">
+                    <input type="radio" name="instalacion" class="d-none"> Cancha de fútbol
+                  </label>
+                  <label class="btn btn-outline-secondary rounded-pill px-3 py-2">
+                    <input type="radio" name="instalacion" class="d-none"> Cancha de vóley
+                  </label>
+                  <label class="btn btn-outline-secondary rounded-pill px-3 py-2">
+                    <input type="radio" name="instalacion" class="d-none"> Piscina
+                  </label>
+                </div>
+                <div class="form-text mt-2">Los detalles (p. ej. número de jugadores o tipo de uso) se definirán en la confirmación.</div>
+              </div>
+
+              <!-- Fecha / Hora -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="date" id="fecha" class="form-control" placeholder="Fecha" required>
+                  <label for="fecha">Día</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="time" id="hora" class="form-control" placeholder="Hora" required>
+                  <label for="hora">Hora (inicio)</label>
+                </div>
+              </div>
+
+              <!-- Duración / Asistentes -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select id="duracion" class="form-select" aria-label="Duración">
+                    <option selected>1</option>
+                    <option>2</option>
+                  </select>
+                  <label for="duracion">Duración (horas)</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="number" id="asistentes" class="form-control" placeholder="N° de personas" min="1" max="100">
+                  <label for="asistentes">N° aproximado de asistentes</label>
+                </div>
+              </div>
+
+              <!-- Datos de contacto -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" id="nombre" class="form-control" placeholder="Nombre completo">
+                  <label for="nombre">Nombre completo</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" id="telefono" class="form-control" placeholder="999999999">
+                  <label for="telefono">Teléfono</label>
+                </div>
+              </div>
+
+              <!-- Botones -->
+              <div class="col-12 d-flex justify-content-end align-items-center gap-2 mt-2">
+                <button type="reset" class="btn btn-outline-secondary rounded-pill px-4">Limpiar</button>
+                <button type="submit" class="btn btn-primary rounded-pill px-4">Previsualizar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Disponibilidad (tabla clara y elegante) -->
+        <div class="mt-4">
+          <h3 class="h6 mb-2 fw-semibold">Disponibilidad (ejemplo)</h3>
+          <div class="table-responsive">
+            <table class="table align-middle shadow-sm bg-white rounded-3 overflow-hidden">
+              <thead class="table-light">
+                <tr>
+                  <th>Instalación</th>
+                  <th>Fecha</th>
+                  <th>Hora</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cancha fútbol</td>
+                  <td>2025-09-10</td>
+                  <td>16:00 - 17:00</td>
+                  <td><span class="badge rounded-pill bg-success">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>Cancha vóley</td>
+                  <td>2025-09-10</td>
+                  <td>17:00 - 18:00</td>
+                  <td><span class="badge rounded-pill bg-danger">Reservada</span></td>
+                </tr>
+                <tr>
+                  <td>Piscina</td>
+                  <td>2025-09-11</td>
+                  <td>10:00 - 12:00</td>
+                  <td><span class="badge rounded-pill bg-success">Disponible</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RESUMEN -->
+      <aside class="col-lg-4">
+        <div class="card border-0 rounded-4 shadow-sm overflow-hidden">
+          <div class="card-body p-4">
+            <h4 class="h6 fw-semibold mb-3">Resumen (vista previa)</h4>
+
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Instalación <span class="text-muted">— (sin selección)</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Día <span class="text-muted">— — —</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Hora <span class="text-muted">— — —</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Duración <span class="text-muted">— —</span>
+              </li>
+            </ul>
+
+            <div class="mb-3 small text-muted">
+              <p class="mb-1"><strong>Reglas rápidas</strong></p>
+              <p class="mb-1">• Reserva mínima: 1 hora.</p>
+              <p class="mb-1">• Cancelación: hasta 24 h antes.</p>
+            </div>
+
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Ver términos y pasos</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-light text-center p-3 mt-auto">
+    <p class="mb-0">© 2025 IE Santa Rosa Sullana | Reservas de Piscinas y Canchas</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
