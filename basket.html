@@ -8,44 +8,59 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <header class="bg-dark text-white text-center p-3">
-    <!-- NAV -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">IE Santa Rosa Sullana</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a href="#reservas" class="nav-link">Reservas</a></li>
-            <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
-            <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-          </ul>
-        </div>
+<body class="bg-light">
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IE Santa Rosa Sullana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="reservas.html" class="nav-link">Reservas</a></li>
+          <li class="nav-item"><a href="galeria.html" class="nav-link">Galería</a></li>
+          <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-  </header>
+  <!-- MAIN -->
+  <main class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Cancha de Básquet Profesional</h1>
+      <p class="text-muted">Espacio para entrenamiento y torneos oficiales</p>
+    </div>
 
-  <main class="container my-5 text-center">
-    <h1>Cancha de Básquet Profesional</h1>
-    <div class="card mx-auto shadow text-center" style="max-width: 600px;">
+    <div class="card mx-auto shadow-lg border-0" style="max-width: 700px;">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy4Gvrw6az1M2tGlEjvyLB2ry56ON467pDGA&s"
-        class="card-img-top" alt="Cancha de Básquet" height="300px">
-      <div class="card-body">
-        <h5 class="card-title">Cancha Profesional de Básquet</h5>
+        class="card-img-top img-fluid" alt="Cancha de Básquet">
+      <div class="card-body text-center">
+        <h5 class="card-title fw-bold">Cancha Profesional de Ejemplo</h5>
         <p class="card-text">Cancha oficial con medidas reglamentarias FIBA, piso de madera y tableros de cristal.</p>
-        <p><strong>Horario de atencion:</strong> 7:00 am - 11:00 pm</p>
-        <p><strong>Precio por hora:</strong> S/ 50</p>
-        <a href="index.html" class="btn btn-primary">Volver</a>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item"><strong>Horario de atención:</strong> 7:00 am - 11:00 pm</li>
+          <li class="list-group-item"><strong>Precio por hora:</strong> S/ 50</li>
+        </ul>
+        <a href="reservas.html" class="btn btn-primary">RESERVAR</a>
       </div>
     </div>
   </main>
-  <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-0">&copy; 2025 Reservas Santa Rosa</p>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light text-center py-4">
+    <p class="mb-2">&copy; 2025 Reservas Santa Rosa</p>
+    <div>
+      <a href="#" class="text-light mx-2">Facebook</a> |
+      <a href="#" class="text-light mx-2">Instagram</a> |
+      <a href="#" class="text-light mx-2">WhatsApp</a>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
